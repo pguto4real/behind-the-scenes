@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState } from 'react';
+import { log } from '../../log';
 
 const HistoryItem = ({ count }) => {
   log('<HistoryItem /> rendered', 3);
