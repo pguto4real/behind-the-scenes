@@ -1,16 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { log } from "../../log";
 
-const ConfigureCounter = ({ onSet }) => {
-  log("<ConfigureCounter />", 1);
+const ConfigureCounter = ({onSet}) => {
   const [enteredNumber, setEnteredNumber] = useState(0);
   function handleChange(event) {
     setEnteredNumber(+event.target.value);
   }
 
   function handleSetClick() {
-    onSet(enteredNumber);
+    setChosenCount(enteredNumber);
     setEnteredNumber(0);
   }
 
