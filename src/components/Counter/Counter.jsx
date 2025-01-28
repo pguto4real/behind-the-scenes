@@ -39,11 +39,11 @@ export default function Counter({ initialCount }) {
 
   const handleDecrement = useCallback(function handleDecrement() {
     // setCounter((prevCounter) => prevCounter - 1);
-    setCounter((prevCounter) => [-1, ...prevCounter]);
+    setCounterChanges((prevCounter) => [-1, ...prevCounter]);
   }, []);
   const handleIncrement = useCallback(function handleIncrement() {
     // setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => [1, ...prevCounter]);
+    setCounterChanges((prevCounter) => [1, ...prevCounter]);
   }, []);
 
   return (
