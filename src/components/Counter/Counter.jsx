@@ -30,13 +30,16 @@ export default function Counter({ initialCount }) {
     [initialCount]
   );
 
-  const [counter, setCounter] = useState(initialCount);
+  // const [counter, setCounter] = useState(initialCount);
+  const [counter, setCounter] = useState([initialCount]);
 
   const handleDecrement = useCallback(function handleDecrement() {
-    setCounter((prevCounter) => prevCounter - 1);
+    // setCounter((prevCounter) => prevCounter - 1);
+    setCounter((prevCounter) => [-1,...prevCounter]);
   }, []);
   const handleIncrement = useCallback(function handleIncrement() {
-    setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => [1,...prevCounter]);
   }, []);
 
   return (
