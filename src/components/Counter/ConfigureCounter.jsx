@@ -19,7 +19,6 @@ const ConfigureCounter = ({ onSet }) => {
       <h2>Set Counter</h2>
       <Input onValueChange={handleInputChange} />
       <Button onClick={handleSetClick}>Set</Button>
-   
     </section>
   );
 };
