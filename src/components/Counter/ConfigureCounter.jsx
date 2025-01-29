@@ -11,6 +11,7 @@ const ConfigureCounter = ({ onSet }) => {
     setEnteredNumber(0);
   }
   function handleChange(event) {
+    console.log(123)
     setEnteredNumber(+event.target.value);
   }
   return (
