@@ -10,14 +10,13 @@ const ConfigureCounter = ({ onSet }) => {
     onSet(enteredNumber);
     setEnteredNumber(0);
   }
-  function handleChange(event) {
-    console.log(123)
-    setEnteredNumber(+event.target.value);
+  function handleInputChange(value) {
+    setEnteredNumber(value);
   }
   return (
     <section id="configure-counter">
       <h2>Set Counter</h2>
-      <Input onChange={handleChange} value={enteredNumber} />
+      <Input onValueChange={handleInputChange} />
       <button onClick={handleSetClick}>Set</button>
     </section>
   );

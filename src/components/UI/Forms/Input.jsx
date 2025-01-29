@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 
-const Input = ({ onChange, value }) => {
+const Input = ({onValueChange }) => {
 
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState(0);
 
   function handleChange(event) {
     const newValue = +event.target.value; // Convert to number
