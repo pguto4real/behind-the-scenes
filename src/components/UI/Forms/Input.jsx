@@ -1,9 +1,8 @@
 import React from 'react'
+import { useState } from 'react';
 
-const Input = ({}) => {
-  return (
-    <input type="number" onChange={handleChange} value={enteredNumber} />
-  )
-}
+const Input = ({ onChange, value }) => {
+    return <input type="number" onChange={onChange} value={value} />;
+  };
 
 export default Input

@@ -1,23 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { log } from "../../log";
+import Input from "../UI/Forms/Input";
 
 const ConfigureCounter = ({ onSet }) => {
   log("<ConfigureCounter />", 1);
   const [enteredNumber, setEnteredNumber] = useState(0);
-  function handleChange(event) {
-    setEnteredNumber(+event.target.value);
-  }
-
   function handleSetClick() {
     onSet(enteredNumber);
     setEnteredNumber(0);
   }
-
+  function handleChange(event) {
+    setEnteredNumber(+event.target.value);
+  }
   return (
     <section id="configure-counter">
       <h2>Set Counter</h2>
-      <input type="number" onChange={handleChange} value={enteredNumber} />
+      <Input />
       <button onClick={handleSetClick}>Set</button>
     </section>
   );
