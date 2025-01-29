@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { log } from "../../log";
 import Input from "../UI/Forms/Input";
+import Button from "../UI/Forms/Button";
 
 const ConfigureCounter = ({ onSet }) => {
   log("<ConfigureCounter />", 1);
@@ -17,7 +18,8 @@ const ConfigureCounter = ({ onSet }) => {
     <section id="configure-counter">
       <h2>Set Counter</h2>
       <Input onValueChange={handleInputChange} />
-      <button onClick={handleSetClick}>Set</button>
+      <Button onClick={handleSetClick}>Set</Button>
+   
     </section>
   );
 };
